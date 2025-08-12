@@ -8,5 +8,5 @@ def test_health_route_returns_ok():
     resp = client.get("/health")
     assert resp.status_code == 200
     data = resp.json()
-    assert data.get("status") == "not ok"
+    assert data.get("status") == "ok"
     assert "version" in data and isinstance(data["version"], str)
